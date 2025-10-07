@@ -12,8 +12,4 @@ CREATE TABLE users (
     phone VARCHAR(20),
     address VARCHAR(255),
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP --,
-
-    -- CONSTRAINT chk_name_not_empty CHECK (LENGTH(TRIM(name)) > 0),
-    -- CONSTRAINT chk_email_format CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
-);
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP );
