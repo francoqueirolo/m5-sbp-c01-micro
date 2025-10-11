@@ -22,17 +22,15 @@ public class UserClient {
 
         String url = userServiceUrl + "/api/users/" + createdBy;
 
-        User usr = restTemplate.getForObject(url, User.class);
+        try {
+            User usr = restTemplate.getForObject(url, User.class);
+            log.info("User retrieved successfully from userdb: {}", usr);
+            return usr;
+        } catch (Exception e) {
+            log.error("Error calling User Service: {}", e.getMessage());
+            throw new RuntimeException("Error calling User Service: " + e.getMessage());
+        }
 
-        log.info("User retrieved successfully from userdb: {}", usr);
-
-        return usr;
-
-        /*
-        return User.builder()
-                .name("John Doe")
-                .build();
-        */
     }
 
 

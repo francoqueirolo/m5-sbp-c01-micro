@@ -22,18 +22,14 @@ public class ProductService {
 
     public Product getUserById(Long id){
 
-
-        ProductEntity entity = productRepository.findById(id).orElse(null);
-
-        // Get client by id
-        log.info(" User Id: {}", entity.getCreatedBy());
+        // Call PostgreSQL productdb
+        ProductEntity productEntity = productRepository.findById(id).orElse(null);
 
         // Call microservice user
-        User user = userClient.getUserById(entity.getCreatedBy());
-        log.info(" User Name: {}", user.getName());
+        User user = userClient.getUserById(productEntity.getCreatedBy());
+        log.info(" User : {}", user);
 
-
-        return  mapper.toDomain(entity);
+        return  mapper.toDomainWithUser(productEntity,user);
     }
 
 }
