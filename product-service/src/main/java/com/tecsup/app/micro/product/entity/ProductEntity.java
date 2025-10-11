@@ -33,4 +33,8 @@ public class ProductEntity {
     @Column(length = 50)
     private String category;
 
+    @Column(name = "created_by")
+    private Long createdBy;
+
+
 }
