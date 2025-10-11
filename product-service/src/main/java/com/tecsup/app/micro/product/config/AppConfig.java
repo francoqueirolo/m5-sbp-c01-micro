@@ -10,16 +10,18 @@ import java.time.Duration;
 @Configuration
 public class AppConfig {
 
-/*    @Bean
+    @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-*/
+
+
+    /*
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder
                 .connectTimeout(Duration.ofSeconds(5))
                 .build();
-    }
+    }*/
 
 }
