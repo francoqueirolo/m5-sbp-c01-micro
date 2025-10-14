@@ -30,6 +30,10 @@ spring:
 ```
 - 3.- Crear el archivo application.yml
 ```
+server:
+  port: 8084
+# Application Name
+
 # -- Application Configuration --
 spring:
   application:
