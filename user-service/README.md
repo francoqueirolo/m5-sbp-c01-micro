@@ -29,7 +29,7 @@
         </dependencies>
     </dependencyManagement>
 ```
-- 4.- Agregar dependencia Spring Cloud Boostrap
+- 4.- Agregar dependencia Spring Cloud Bootstrap
 ```
    <!-- Spring Cloud Boostrap -->
         <dependency>
