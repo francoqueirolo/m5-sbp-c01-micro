@@ -2,7 +2,7 @@
 
 - 1.- Cambiar el archivo application.properties a application.yml
 - 2.- Copiar application.yml en el directorio config-repo  
-- 3.- Agregar dependencia en el pom.xml
+- 3.- Agregar dependencia Spring Cloud Config Client
 ```
         <spring-cloud.version>2025.0.0</spring-cloud.version>
 
@@ -29,3 +29,22 @@
         </dependencies>
     </dependencyManagement>
 ```
+- 4.- Agregar dependencia Spring Cloud Boostrap
+```
+   <!-- Spring Cloud Boostrap -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+```
+- 5.- Agregar el archivo bootstrap.yml en el directorio src/main/resources
+```
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      uri: http://localhost:8084
+      fail-fast: true
+```
+NO  - 6.- Agregar la anotación @EnableConfigServer en la clase principal
