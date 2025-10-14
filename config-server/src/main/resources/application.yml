@@ -12,6 +12,6 @@ spring:
         git:
           # File URI - Adjust path according to your system:
           # Windows: file:///C:/Users/YourUser/microservices-lab1/config-repo
-          uri: file://${user.home}/git_codigo/config-repo
+          uri: file://${user.home}/DEV/config-repo
           # Git Configuration
           default-label: main
