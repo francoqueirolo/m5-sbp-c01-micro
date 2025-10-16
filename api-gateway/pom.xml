@@ -64,6 +64,14 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+        <!-- Lombok (Opcional, para logging más limpio) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
