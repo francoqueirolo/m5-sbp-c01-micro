@@ -14,12 +14,13 @@ public class LoggingFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("Request received at " + java.time.LocalDateTime.now());
-        log.info("Request Method: " + exchange.getRequest().getMethod());
-        log.info("Request URI: " + exchange.getRequest().getURI());
+        log.info("Incoming request data:");
+        log.info("Method: " + exchange.getRequest().getMethod());
+        log.info("Path: " + exchange.getRequest().getPath());
+        log.info("URI: " + exchange.getRequest().getURI());
         return chain.filter(exchange).then(
             reactor.core.publisher.Mono.fromRunnable(() -> {
-                log.info("Response sent at " + java.time.LocalDateTime.now());
+                log.info("Outgoing response data:");
                 log.info("Response Status Code: " + exchange.getResponse().getStatusCode());
             })
         );
