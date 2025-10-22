@@ -11,7 +11,7 @@ Desarrollar un microservicio de **Gestión de Órdenes (Order Service)** que se 
 
 ---
 
-## 📋 DESCRIPCIÓN DEL PROBLEMA
+## 📋 DESCRIPCIÓN
 
 En una arquitectura de microservicios para un sistema de e-commerce, se requiere implementar el servicio de gestión de órdenes de compra. Este servicio debe:
 
@@ -52,7 +52,7 @@ Cuando alguno de estos servicios falla o está lento, el Order Service **NO debe
             │              │              │
             │              │              │
             ▼              ▼              ▼
-       ┌────────┐     ┌────────┐    ┌────────┐
+       ┌────────┐     ┌─────────┐    ┌────────┐
        │userdb  │     │productdb│    │orderdb │ ◄── NUEVA BD
        │ :5432  │     │ :5433   │    │ :5434  │
        └────────┘     └─────────┘    └────────┘
@@ -359,19 +359,16 @@ order-service/
 - [ ] Proyecto completo de Order Service
 - [ ] Código limpio y comentado
 - [ ] Estructura organizada
-- [ ] No hay código comentado innecesario
 
 ### 2. Base de Datos
-- [ ] Script SQL (`V1__init_schema.sql`)
+- [ ] Script SQL (`V1__INIT_SCHEMA.sql`)
 - [ ] Datos de prueba (mínimo 3 órdenes)
-- [ ] Documentación del modelo
 
 ### 3. Configuración
 - [ ] `application.yml` completo
 - [ ] `bootstrap.yml` completo
 - [ ] `config-repo/order-service.yml` con Circuit Breaker
 - [ ] `docker-compose.yml` actualizado
-- [ ] Dockerfile
 
 ---
 
@@ -379,15 +376,14 @@ order-service/
 
 | Criterio | Puntos |
 |----------|--------|
-| Funcionalidad CRUD completa | 20 |
-| Circuit Breaker User Service | 15 |
-| Circuit Breaker Product Service | 15 |
-| Fallback Methods correctos | 10 |
-| Base de Datos (esquema + datos) | 10 |
-| Pruebas (5 casos ejecutados) | 15 |
-| Documentación completa | 10 |
-| Código limpio y organizado | 5 |
-| **TOTAL** | **100** |
+| Funcionalidad completa | 4 |
+| Circuit Breaker User Service | 3 |
+| Circuit Breaker Product Service | 3 |
+| Fallback Methods correctos | 2 |
+| Base de Datos (esquema + datos) | 2 |
+| Pruebas (5 casos ejecutados) | 3 |
+| Código limpio y organizado | 1 |
+| **TOTAL** | **20** |
 
 
 ---
