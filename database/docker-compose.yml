@@ -1,5 +1,5 @@
 version: '3.8'
-
+name : microservices-databases
 services:
   # PostgreSQL para User Service
   postgres-user:
