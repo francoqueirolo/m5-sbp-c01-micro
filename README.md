@@ -275,10 +275,6 @@ INSERT INTO order_items (order_id, product_id, quantity, unit_price, subtotal) V
   "totalAmount": 2999.97,
   "status": "PENDING",
   "createdAt": "2025-01-20T10:30:00",
-  "servicesStatus": {
-    "userService": "available",
-    "productService": "available"
-  }
 }
 ```
 
